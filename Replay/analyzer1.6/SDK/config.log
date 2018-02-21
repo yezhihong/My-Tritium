@@ -1,0 +1,37 @@
+file /home/ole/Develop/analyzer/SDK/SConstruct,line 90:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking whether the C++ compiler works... 
+scons: Configure: ".sconf_temp/conftest_0.cpp" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp/conftest_0.cpp <-
+  |  |
+  |  |int main()
+  |  |{
+  |  |    return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp/conftest_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |c++ -o .sconf_temp/conftest_0.o -c -O -Wall -Woverloaded-virtual -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -std=c++11 -m64 -pthread -rdynamic -DNDEBUG -DLINUXVERS -DHAS_SSTREAM -I. -I/home/ole/Develop/analyzer -I/home/ole/Develop/analyzer/src -I/home/ole/Develop/analyzer/hana_decode -I/usr/include/root .sconf_temp/conftest_0.cpp
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking whether the C compiler works... 
+scons: Configure: ".sconf_temp/conftest_1.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp/conftest_1.c <-
+  |  |
+  |  |int main()
+  |  |{
+  |  |    return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp/conftest_1.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp/conftest_1.o -c -m64 -pthread -rdynamic -DNDEBUG -DLINUXVERS -DHAS_SSTREAM -I. -I/home/ole/Develop/analyzer -I/home/ole/Develop/analyzer/src -I/home/ole/Develop/analyzer/hana_decode -I/usr/include/root .sconf_temp/conftest_1.c
+  |
+scons: Configure: (cached) yes
+
+
