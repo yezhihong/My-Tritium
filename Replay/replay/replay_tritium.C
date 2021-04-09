@@ -19,8 +19,6 @@ using namespace std;
 #define LEFT_ARM_CONDITION runnumber<20000
 
 void replay_tritium(Int_t runnumber=0,Int_t numevents=0,Int_t fstEvt=0,Bool_t QuietRun = kFALSE, Bool_t OnlineReplay = kFALSE, Bool_t bPlots = kFALSE,Bool_t autoreplay = kFALSE){
-  
-    //gROOT->ProcessLine(".x rootlogon.C");
 
   char buf[300];
   Int_t nrun=0;

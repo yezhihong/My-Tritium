@@ -74,10 +74,10 @@ if [ -e $CACHEDIR"/triton_"$krun".dat."$COUNT ]; then
     rm -f batch_files/jscript_${krun}
     echo "PROJECT     triton" > batch_files/jscript_${krun}
     echo "COMMAND     "$home"/batch_farm/batch_files/batch_"${krun} >>batch_files/jscript_${krun}
-    echo "JOBNAME     H3.analysis"${krun} >>batch_files/jscript_${krun}
+    echo "JOBNAME     H3.replay"${krun} >>batch_files/jscript_${krun}
     echo "TRACK       analysis" >> batch_files/jscript_${krun}
     echo "TIME        4000" >>batch_files/jscript_${krun}
-    echo "MEMORY      1800 MB" >>batch_files/jscript_${krun}
+    echo "MEMORY      4000 MB" >>batch_files/jscript_${krun}
     echo "OS          centos7" >>batch_files/jscript_${krun}
  # echo "MAIL:       "$username >>batch_files/jscript_${krun}
  # echo "INPUT_FILES:"$home"/replay/HRS.odef" >>batch_files/jscript_L_${krun}
@@ -90,8 +90,7 @@ if [ -e $CACHEDIR"/triton_"$krun".dat."$COUNT ]; then
 #    Submit job to the farm    #  
 ################################
     #jsub batch_files/jscript_${krun}
-    #swif add-jsub -workflow h3_analysis -create -script ./batch_files/jscript_${krun}
-    #swif run -workflow h3_analysis
+    swif add-jsub -workflow h3_replay -create -script ./batch_files/jscript_${krun}
 ################################
 ################################
 
@@ -116,6 +115,9 @@ else
 echo
 
 fi
+
+##Now you have added many jobs under this work-flow, now start to run 
+swif run -workflow h3_replay
 
 echo
 echo "***** Good Bye and thank you for using the script *****"
